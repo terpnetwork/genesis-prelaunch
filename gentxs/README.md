@@ -41,13 +41,45 @@ Please keep the following things in mind.
 **WARNING: THIS IS NOT THE FINAL RECOMMENDATION FOR THE GENESIS FILE**
 
 
-To understand how this file was compiled, please see [GENESIS.md](GENESIS.md).
+To understand how this file was compiled, please see [the gen-account-scripts folder](../gen-account-scripts/README.md).
 
-A final recommendation will be available shortly, including a justification for
+A final recommendation will be available after consensus of the TestNET participants including a justification for
 all components of the genesis file and scripts to recompute it.
 
 Anyone who intends to participate in the genesis ceremony must submit a pull request
 containing a valid `gen-tx` to this repository in the `/gentx` folder with a file name like `<moniker>.json`.
+
+## Gen-TX Steps
+
+### Initialize your Terp Node
+```
+terpd init <your-moniker>
+```
+
+### Add Keys 
+make sure you are using the same keyring for your validator on main-net. 
+```
+terpd keys add <your-moniker> --recover
+```
+#
+### Move genesis file to ~/.terp/config/genesis.json
+from the root of the `gentx/` directory:
+```
+rm ~/.terp/config/genesis.json && cp genesis.json ~/.terp/config/genesis.json
+```
+
+### Create Gentx
+To generate your gentx run the following command:
+```
+terpd gentx \
+  --amount 1000000uterp \
+  --min-self-delegation <min_self_delegation> \
+  --commission-rate <commission_rate> \
+  --commission-max-rate <commission_max_rate> \
+  --commission-max-change-rate <commission_max_change_rate> \
+  --pubkey <consensus_pubkey> \
+  --name <key_name>
+  ```
 
 ## A Note about your Validator Signing Key
 
@@ -56,19 +88,16 @@ your validator double sign, causing a slash of 5% of your terp tokens  and the [
 
 ## Next Steps
 
-
-
-The TerpNET Foundation DAO team will recommend a particular genesis file and software version, but there is no guarantee a network will ever start from it - nodes and validators may
+Once all gentx files are collected, The TerpNET Foundation DAO team will recommend a particular genesis file and software version to the Test Network, but there is no guarantee a network will ever start from it - nodes and validators may
 never come online, the community may disregard the recommendation and choose
 different genesis files, and/or they may modify the software in arbitrary ways. Such
-outcomes and many more are outside the TerpNET Foundation DAO's control and completely in the hands
-of the community.
+outcomes and many more are outside the TerpNET Foundation DAO's control and completely in the hands of the community.
 
-On initialization of the software, Terp Network's Bonded Proof-of-Stake (Brought to you by comet-bft) system will kick in to determine the initial validator set (max 42 validators) from the set of `gentx` transactions.
+On initialization of the software, Terp Network's Bonded Proof-of-Stake (Brought to you by comet-bft) system will kick in to determine the initial validator set (max 69 validators) from the set of `gentx` transactions.
 More than 2/3 of the voting power of this set must be online and participating in consensus
 in order to create the first block and Terp Network.
 
-We expect and hope that TERP holders will exercise discretion in initial staking to ensure the network does not ever become excessively centralized as we move steadily to the target of 66% TERP's staked. This is not a first of its kind experiment in bootstrapping a decentralized network. Other proof of stake networks have bootstrapped with the aid of a centralized foundation or other administrator. We hope to bootstrap as a decentralized community, building on the shared experiences of many many testnets.
+We expect and hope that TERP holders will exercise discretion in initial staking to ensure the network does not ever become excessively centralized. This is not a first of its kind experiment in bootstrapping a decentralized network. Other proof of stake networks have bootstrapped with the aid of a centralized foundation or other administrator. We hope to bootstrap as a decentralized community, building on the shared experiences of many many testnets.
 
 See the [blog
 post](https://blog.cosmos.network/the-3-phases-of-the-cosmos-hub-mainnet-fdff3a68c4c0) 
