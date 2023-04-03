@@ -51,7 +51,12 @@ containing a valid `gen-tx` to this repository in the `/gentx` folder with a fil
 
 ## Gen-TX Steps
 
-### Initialize your Terp Node
+### A. Fork this repository: https://github.com/terpnetwork/genesis-prelaunch/fork
+
+### B. clone your forked repo:
+
+
+### C. Initialize your Terp Node
 ```
 terpd init <your-moniker>
 ```
@@ -81,6 +86,17 @@ terpd gentx \
   --name <key_name>
   ```
 
+
+## Copy the Gentx to [`/gentxs/pregen-gentx/gentx.json`](./pregen-gentx/)
+from the `/gentx ` direcotry:
+```
+cp ~/.terp/config/gentx/<your-gentx>.json /pregen-gentx/<your-gentx>.json 
+```
+## Push your new changes
+
+```
+cd .. && git add -A && git commit -m "added-my-gentx && git push origin main "
+```
 ## A Note about your Validator Signing Key
 
 Your validator signing private key lives at `~/.terp/config/priv_validator_key.json`. If this key is stolen, an attacker would be able to make
