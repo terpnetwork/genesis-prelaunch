@@ -76,13 +76,11 @@ rm ~/.terp/config/genesis.json && cp genesis.json ~/.terp/config/genesis.json
 ### Create Gentx
 To generate your gentx run the following command:
 ```
-terpd gentx \
-  --amount 1000000uterp \
+terpd gentx --amount 1000000uterp --chain-id morocco-1 \
   --min-self-delegation <min_self_delegation> \
   --commission-rate <commission_rate> \
   --commission-max-rate <commission_max_rate> \
   --commission-max-change-rate <commission_max_change_rate> \
-  --pubkey <consensus_pubkey> \
   --name <key_name>
   ```
 
