@@ -3,10 +3,10 @@ Welcome! This process ensures that the decision-making process is transparent, f
 - [**Genesis Introduction**](./docs/genesis-intro.md)
 - [**Gentx Folder**](./gentxs/)
 ## Genesis Launch Checklist
-- [] Genesis Launch Documentaion: [Link](./docs/genesis-intro.md)
+- [X] Genesis Launch Documentaion: [Link](./docs/genesis-intro.md)
 - [] Solventless Terp Airdrop Cycles Documentation: [Link](./docs/distribution.md)
-- [] Gentx Process: [Link](./docs/gentxs/README.md)
-- [] Foundation Delegation Policy: [Link]()
+- [X] Gentx Process: [Link](./gentxs/README.md)
+- [X] Foundation Delegation Policy: [Link](https://github.com/TerpNETFoundationDAO/hello-world)
 ## Post Launch Checklist
 - [] 2nd Airdrop Cycle Proposal
 - [] Smart Contract Upload Proposals
