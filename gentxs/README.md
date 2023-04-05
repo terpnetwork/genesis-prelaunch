@@ -72,7 +72,7 @@ export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 ```
 ### C.2 Download terp-core v1.0.0 
 ```
-git clone -b v1.0.0-rc https://gihtub.com/terpnetwork/terp-core 
+git clone -b v1.0.0-rc https://github.com/terpnetwork/terp-core 
 
 ```
 cd terp-core && make install
