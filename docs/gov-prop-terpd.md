@@ -1,12 +1,8 @@
-# Request for Consensus: Initial State Params - Terp Network 
-
+# Request for Consensus: Initial State Params - Terp Network
 Welcome! This proposal is a request from the [TerpNET Foundation DAO](https://daodao.zone/dao/juno1wpq03vzv4f9fczss0sqt4xxfmxel6zmhdxal68lg8qpa7cgzj25sy3k3dt/proposals/A1) to the Terp Network community for consensus on the initial state parmeters of Terp Network. This includes the [genesis-prelaunch repository](https://github.com/terpnetwork/genesis-prelaunch), being the source of truth for this proposal, and also including the [scripts used for generating inital recommended balance & distribution](https://github.com/terpnetwork/genesis-prelaunch/tree/main/gen-account-scripts), and the [gentx repo](https://github.com/terpnetwork/genesis-prelaunch/tree/main/gentxs), with a bit of [documentation](https://github.com/terpnetwork/genesis-prelaunch/tree/main/docs) as well.
-
 ## Final Reccommended Genesis File & Process
 We are proposing that the final genesis file includes the gentxs of each validator who has participated & submitted a gentx & also a member within the [Validation subDAO](https://daodao.zone/dao/juno1wpq03vzv4f9fczss0sqt4xxfmxel6zmhdxal68lg8qpa7cgzj25sy3k3dt/proposals/A1). The final reccommended genesis file will end up [here](https://github.com/terpnetwork/genesis-prelaunch/blob/main/gentxs/final-genesis.json). The final reccomended genesis, including all gentxs from TerpNET Validation DAO members, may not be available by the time this proposal goes up, however we can enforce these intial parameters nonetheless. 
-
 ## Inital App Params
-
 ### Reccommended Binary
 - [V1.0.0](https://github.com/terpnetwork/terp-core/pull/47)
 - chain-id: morocco-1
@@ -29,7 +25,6 @@ We are proposing that the final genesis file includes the gentxs of each validat
 - blocks_per_year: `6311520`
 - send_enabled: `true`
 - receive_enabled: `true`
-
 ### Inital Vesting Parameters
 Only the TerpNET Foundation DAO & 10 inital validators will have any tokens in circulation at genesis. 
 - TerpNET Foundation DAO: `50% at 7 years`
@@ -65,9 +60,5 @@ Only the TerpNET Foundation DAO & 10 inital validators will have any tokens in c
 slash_fraction_downtime: `.1%`
 ### Initial TokenFactory Denom Fee
 - denom_creation_fee: `100thiol` 
-
-
-BY VOTING YES, you agree to all of the reccommended initial genesis state above, including and the inital valset, the verifiable location of the final-genesis file, and all of the inital Terp-Core params found [here](https://github.com/terpnetwork/genesis-prelaunch/blob/main/gentxs/genesis.json). Also by voting YES you agree you understand that at the time of this proposal the final genesis may not include 100% of the expected gentx from validator in the Validation subDAO. 
-
-
+BY VOTING YES, you agree to all of the reccommended initial genesis state above, including and the inital valset, the verifiable location of the final-genesis file, and all of the inital Terp-Core params found [here](https://github.com/terpnetwork/genesis-prelaunch/blob/main/gentxs/genesis.json). Also by voting YES you agree you understand that at the time of this proposal the final genesis may not include 100% of the expected gentx from validator in the Validation subDAO. \
 BY VOTING NO, you disagree to any of the recommended initital genesis state above. 

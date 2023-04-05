@@ -57,7 +57,25 @@ containing a valid `gen-tx` to this repository in the `/gentx` folder with a fil
 
 
 ### C. Initialize your Terp Node
+
+#### c.1 download go1.20 
 ```
+wget https://golang.org/dl/go1.20.3.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.20.3.linux-amd64.tar.gz
+```
+#### c.2 set your PATH environment variable
+```
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export GO111MODULE=on
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+```
+### C.2 Download terp-core v1.0.0 
+```
+git clone -b v1.0.0-rc https://gihtub.com/terpnetwork/terp-core 
+
+```
+cd terp-core && make install
 terpd init <your-moniker>
 ```
 
